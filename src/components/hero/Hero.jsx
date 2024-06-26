@@ -47,7 +47,7 @@ const Hero = () => {
           <div className="flex justify-center items-center gap-3 flex-col">
             <div data-aos="fade-up" className="buttons flex gap-5">
               <a
-                href="#"
+                href="/"
                 className=" bg-black text-[1rem] text-white px-10 py-2 sm:px-8 rounded-lg font-bold  hover:text-yellow-500"
               >
                 <span>Hire Me</span>

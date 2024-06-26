@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="sm:text-[12px]" data-aos="fade-right">
             | Copyright &copy; <span>2024 ❤️ Hariom Bamboriya </span> All rights
               reserved
-            <a href="#"></a> |
+            |
           </div>
         </div>
 

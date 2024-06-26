@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
-import HBLogo from "../../assets/HBLogo1.avif";
+// import HBLogo from "../../assets/HBLogo1.avif";
 // import Resume from "../resume/Resume";
 
 const navItems = [
