@@ -10,7 +10,6 @@ import { FaPlay,FaPause } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import resumePDF from "../../assets/Resume.pdf";
 import HariomPic from "../../assets/HariomPic.jpg";
-import Bg1 from "../../assets/random bg img/coding bg1.jpg"
 import "../../style/BgColor.css"
 
 const Hero = () => {
@@ -26,7 +25,7 @@ const Hero = () => {
               data-aos="fade-up"
               className="text-center text-5xl font-bold sm:text-[2rem]"
             >
-              Hello, I'm Dhakad
+              Hello, I'm Hariom Bamboriya
             </h2>
             <TypeAnimation
               data-aos="fade-up"
@@ -57,7 +56,7 @@ const Hero = () => {
               <a
                 href={resumePDF}
                 className="flex items-center gap-2 border- text-[1rem] bg-white border-black px-7 py-2 sm:px-6 rounded-lg font-bold  hover:text-yellow-500"
-                download
+                download="Hariom Bamboriya Resume"
               >
                 <div className="flex items-center gap-1">
                   Resume <FiDownload className="hover:animate-bounce "/>

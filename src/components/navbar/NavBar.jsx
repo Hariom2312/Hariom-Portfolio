@@ -67,14 +67,14 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
       <nav className=" container m-auto flex items-center justify-between">
        
         <div data-aos="fade-down" className="logo">
-           <Link
+           {/* <Link
             onClick={() => {window.scrollTo(0, 0),setActiveIndex("home")}}
             to="/"
             className="text-3xl font-bold sm:text-3xl flex items-center gap-3"
           >
            <img src={HBLogo} alt="Logo" className="w-[50px] h-[50px] aspect-auto ring-2 ring-slate-700 p-1 mix-blend-hard-light rounded-full hover:rotate-[360deg] duration-200" />
             <p className="ml-2 hover:scale-105">Hariom Bamboriya</p> 
-          </Link>
+          </Link> */}
         </div>
         
         <div
