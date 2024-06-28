@@ -64,7 +64,7 @@ const Reference = ({ darkMode }) => {
                        <img src={Leetcode} alt="Leetcode"  className="w-[180px] h-[150px]"/>
                       </div>
                       
-                        <button class="buttonhover">Leetcode</button> 
+                        <button className="buttonhover">Leetcode</button> 
                       </Link>
                     </div>
                 </div>
