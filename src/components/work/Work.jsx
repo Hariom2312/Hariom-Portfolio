@@ -3,7 +3,8 @@ import WorkCard from "../../chip/WorkCard";
 
 const Work = () => {
   return (
-    <div id="works" className=" container m-auto mt-16">
+    <div id="works">
+    <div className="container m-auto mt-16">
       {/* heading */}
       <div 
        data-aos="fade-up"
@@ -24,6 +25,7 @@ const Work = () => {
           <WorkCard />
         </div>
       </div>
+    </div>
     </div>
   );
 };

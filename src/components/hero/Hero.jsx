@@ -114,7 +114,7 @@ const Hero = () => {
               alt="HariomPic"
             />
 
-            <div className=" absolute -bottom-10 md:bottom-3 -right-10 md:right-2 ">
+            <div className="absolute -bottom-10 sm:-bottom-1 sm:-right-1 md:bottom-3 -right-10 md:right-2 ">
               <div
                 onClick={()=> setStop(!stop)}
                 data-aos="zoom-in"

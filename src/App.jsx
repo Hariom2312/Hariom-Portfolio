@@ -26,16 +26,17 @@ const App = () => {
         </div>
       }
     >
+    
       {loading ? (
         <div className="h-screen w-full flex items-center justify-center">
           <InfinitySpin color="black" height={4} />
         </div>
       ) : (
-        <Home/>
+       <Home/>
       )}
       <ToastContainer
-        position="top-center"
-        autoClose={5000}
+        position="top-left"
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -46,6 +47,7 @@ const App = () => {
         theme="dark"
       />
     </Suspense>
+    
   );
 };
 

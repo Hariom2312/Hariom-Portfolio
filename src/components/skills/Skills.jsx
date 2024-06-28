@@ -18,7 +18,7 @@ import { IoLogoNodejs } from "react-icons/io";
 const Skills = ({ darkMode }) => {
   return (
     <div id="skills">
-      <div className=" bg-[url('https://ik.imagekit.io/2lzi3lqgg/bg-image.jpg?updatedAt=1719337920865')] bg-no-repeat bg-cover container m-auto  mt-16">
+      <div className=" w-full bg-[url('https://ik.imagekit.io/2lzi3lqgg/bg-image.jpg?updatedAt=1719337920865')] bg-no-repeat bg-cover container m-auto  mt-16">
         {/* heading */}
         <div data-aos="fade-up" className="relative mb-5">
           <h3 className=" text-3xl font-black text-gray-400 sm:text-2xl">

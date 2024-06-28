@@ -1,6 +1,6 @@
 import React from "react";
 import "../../style/button.scss";
-import CodingPic from "../../assets/coding.gif";
+// import CodingPic from "../../assets/coding.gif";
 import GFG from "../../assets/GFG.png"
 import Leetcode from "../../assets/Leetcode1.png"
 import { Link } from "react-router-dom";
@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Reference = ({ darkMode }) => {
   return (
     <>
-      <div id="reference">
+      <div id="reference" className="w-full">
         <div className=" container m-auto  mt-16">
           {/* heading */}
           <div data-aos="fade-up" className="relative mb-5">
@@ -18,7 +18,7 @@ const Reference = ({ darkMode }) => {
             <span className="h-[1.1px] right-0 absolute w-[90%] bg-gray-300 block"></span>
           </div>
           {/* content*/}
-          <div className="flex md:flex-col ">
+          <div className="flex md:flex-col">
             <div className="left flex-1 w-full">
               <p
                 data-aos="fade-up"
@@ -31,30 +31,17 @@ const Reference = ({ darkMode }) => {
               <p>Visit Once</p>
               <span className="h-[1.1px] w-[12%] bg-gray-300 block"></span>
               </div>
+
+
+              <div className=" flex flex-row justify-between items-center md:flex-col">
               {/* left box */}
               <div
                 data-aos="zoom-in"
                 className="flex items-center h-[100%] justify-start md:justify-center mt-5 mb-5"
               >
-                {/* <div className=" flex flex-col gap-6  w-3/4  my-5 md:w-[90%]">
-                <ProgressBar logo={<IoLogoHtml5 />} name={"HTML"} value={95} />
-                <ProgressBar logo={<IoLogoCss3 />} name={"CSS"} value={75} />
-                <ProgressBar
-                  logo={<SiJavascript />}
-                  name={"Javascript"}
-                  value={80}
-                />
-                <ProgressBar logo={<FaReact />} name={"React Js"} value={80} />
-                <ProgressBar
-                  logo={<SiTailwindcss />}
-                  name={"Tailwind CSS"}
-                  value={80}
-                />
-              </div> */}
-
                 <div
                   data-aos="fade-up"
-                  className=" flex flex-wrap flex-row gap-5 text-center mx-auto my-auto justify-center"
+                  className=" flex flex-row sm:flex-col gap-5 text-center mx-auto my-auto justify-center"
                 >
                   <div className="border-2 px-10 py-24 rounded-xl border-amber-500  shadow-2xl  shadow-slate-400 hover:-translate-y-2 hover:duration-300">
                    <Link
@@ -62,10 +49,7 @@ const Reference = ({ darkMode }) => {
                     >
                    <div className="text-yellow-500 text-center font-bold text-2xl ">
                      <img src={GFG} alt="GFG" className="" />
-                    
-                    
-                      <button class="buttonhover">GeekForGeek</button> 
-                    
+                       <button class="buttonhover">GeekForGeek</button>        
                     </div>
                     </Link>
 
@@ -85,19 +69,21 @@ const Reference = ({ darkMode }) => {
                     </div>
                 </div>
               </div>
-            </div>
 
             {/* right box */}
 
-            <div  data-aos="fade-down" className=" right relative flex-1 flex flex-wrap p-5 items-center justify-center sm:w-full pt-8 ">
+            <div  data-aos="fade-down" className="w-[50%]">
               <img
-                src={CodingPic}
+                // src={CodingPic}
+                src="https://ik.imagekit.io/2lzi3lqgg/random%20bg%20img/coding%20bg4.jpg?updatedAt=1719336417834"
                 alt="CodingLogo"
-                className="my-auto md:hidden block w-[80%] h-[90%] rounded absolute top-20 right-0"
+                className="rounded block sm:hidden lg:w-[200px] lg:h-[350px] ml-5 mx-auto"
               />
             </div>
           </div>
+          </div>
         </div>
+      </div>
       </div>
     </>
   );

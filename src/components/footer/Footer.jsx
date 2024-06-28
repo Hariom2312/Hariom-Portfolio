@@ -7,9 +7,8 @@ import { MdOutlineEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div
-      id="Resume"
-      className="w-full mx-auto m-auto h-[300px]  mt-16 sm:h-[250px] bg-yellow-400"
+    <div id="contact">
+     <div className=" mx-auto m-auto h-[300px]  mt-16 sm:h-[250px] bg-yellow-400"
     >
       <div className="w-full overflow-hidden flex flex-row justify-evenly items-center">
         <div className=" h-full flex flex-col gap-8 items-center justify-between p-10 sm:p-7">
@@ -46,9 +45,8 @@ const Footer = () => {
             </a>
           </div>
           <div className="sm:text-[12px]" data-aos="fade-right">
-            | Copyright &copy; <span>2024 ❤️ Hariom Bamboriya </span> All rights
+            Copyright &copy; <span>2024 ❤️ Hariom Bamboriya </span> All rights
               reserved
-            |
           </div>
         </div>
 
@@ -66,6 +64,7 @@ const Footer = () => {
               <a href="mailto:dhakadhariom007@gmail.com">dhakadhariom007@gmail.com</a>
             </div>
           </legend>
+         </div>
         </div>
       </div>
     </div>

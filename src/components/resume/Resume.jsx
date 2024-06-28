@@ -2,7 +2,8 @@ import React from "react";
 
 const Resume = () => {
   return (
-    <div id="resume" className=" container m-auto   mt-16">
+    <div id="resume">
+    <div className=" container m-auto mt-16">
       {/* heading */}
       <div data-aos="fade-up" className="relative mb-5">
         <h3 className=" text-3xl font-black text-gray-400 sm:text-2xl">
@@ -88,6 +89,7 @@ const Resume = () => {
           </fieldset>
         </div>
       </div>
+    </div>
     </div>
   );
 };

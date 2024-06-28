@@ -1,16 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { RiSendPlaneFill } from "react-icons/ri";
 
-const Contact = () => {
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
+const Contact = () => {
+  
+  const[user,setUser] = useState({
+    name:"",
+    email:"",
+    message:"",
+  });
+
+  let name,value;
   const handleSubmit = (e)=>{
     e.preventDefault();
-    alert("Submitted Detail Successfully")
+     name = e.target.name;
+     value = e.target.value;
+     setUser({...user,[name]:value});
+  }
+
+  const postData = async (e)=>{
+    e.preventDefault();
+    const{name,email,message} = user;
+   
+    const checkEmail = email.slice(-10);
+
+    if(!name || !email || (checkEmail !== "@gmail.com") || (email.length < 11)){
+      console.log("Enter Data Properly");
+      toast.error("Enter Data Properly");
+      return ;
+    }
+   
+    if(email)
+
+    try{
+      const res = await fetch("https://hariom-bamboriya-default-rtdb.firebaseio.com/portfolio.json" , {
+        method : "POST",
+        header: {
+          "Content-Type" : "application/json",
+        },
+        body:JSON.stringify({
+          name,
+          email,
+          message,
+        })
+      });
+      console.log(res.json());
+      toast.success("Data Sent to Hariom 🎉")
+      
+    }catch(err){
+      console.error(`Error occured ${err}`);
+      console.log(err);
+      toast.error("Data not send try again");
+    }
   }
 
   return (
-    <div id="contact" className="container m-auto mt-16">
+    <div id="contact">
+    <div className=" container m-auto mt-16">
       {/* heading */}
        <div 
       // data-aos="fade-up"
@@ -49,36 +98,44 @@ const Contact = () => {
         </div>
         <div className="right flex-1">
           <form
-            onSubmit={handleSubmit}
             data-aos="zoom-in"
-            
+            method="POST"
             className="flex justify-center items-center flex-col gap-5 w-[70%] md:w-[100%] sm:w-[95%] mx-auto"
-            action="mailto:xyz@gmail.com"
+            action="mailto:dhakadhariom007@gmail.com"
           >
             <input
               className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full"
               type="email"
               placeholder="e.g. example@email.com"
-              name=""
+              name="email" 
               required
+              value={user.email}
+              onChange={handleSubmit}
+              // autoComplete="off"
             />
             <input
               className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full"
               type="text"
               placeholder="e.g. John Doe"
-              name=""
+              name="name"
+              value={user.name}
+              onChange={handleSubmit}
               required
+              // autoComplete="off"
             />
             <textarea
               className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full"
               rows="4"
               cols="50"
               placeholder="Write your message"
-              name=""
-              id=""
+              name="message"
+              value={user.message}
+              onChange={handleSubmit}
+              autoComplete="off"
             />
             <button
-              className= "hover:bg-gray-600 hover:scale-105 duration-500 bg-gray-400 w-full text-white font-semibold  p-2 rounded-lg flex items-center justify-center space-x-1"
+              onClick={postData}
+              className= "hover:bg-gray-600 hover:scale-105 duration-500 bg-gray-500 w-full text-white font-semibold  p-2 rounded-lg flex items-center justify-center space-x-1"
             >
               <span>Send</span>
               <RiSendPlaneFill/>
@@ -86,6 +143,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 };
