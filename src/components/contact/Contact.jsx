@@ -36,7 +36,7 @@ const Contact = () => {
     if(email)
 
     try{
-      const res = await fetch("https://hariom-dhakad-default-rtdb.firebaseio.com/portfolio.json" , {
+       await fetch("https://hariom-dhakad-default-rtdb.firebaseio.com/portfolio.json" , {
         method : "POST",
         header: {
           "Content-Type" : "application/json",
