@@ -36,7 +36,7 @@ const Contact = () => {
     if(email)
 
     try{
-      const res = await fetch("https://hariom-bamboriya-default-rtdb.firebaseio.com/portfolio.json" , {
+      const res = await fetch("https://hariom-dhakad-default-rtdb.firebaseio.com/portfolio.json" , {
         method : "POST",
         header: {
           "Content-Type" : "application/json",
@@ -111,7 +111,6 @@ const Contact = () => {
               required
               value={user.email}
               onChange={handleSubmit}
-              // autoComplete="off"
             />
             <input
               className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full"
@@ -121,7 +120,6 @@ const Contact = () => {
               value={user.name}
               onChange={handleSubmit}
               required
-              // autoComplete="off"
             />
             <textarea
               className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full"
@@ -131,7 +129,6 @@ const Contact = () => {
               name="message"
               value={user.message}
               onChange={handleSubmit}
-              autoComplete="off"
             />
             <button
               onClick={postData}
